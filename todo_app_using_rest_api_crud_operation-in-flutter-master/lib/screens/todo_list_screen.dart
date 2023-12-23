@@ -129,7 +129,7 @@ class _TodoListState extends State<TodoList> {
     setState(() {
       isLoading = true;
     });
-    final url = 'http://api.nstack.in/v1/todos?page=1&limit=10';
+    final url = 'http://localhost:8080/todos';
     final uri = Uri.parse(url);
     final response = await http.get(uri);
     if (response.statusCode == 200) {
@@ -146,7 +146,7 @@ class _TodoListState extends State<TodoList> {
 
   // for delete
   Future<void> deleteById(String id) async {
-    final url = 'http://api.nstack.in/v1/todos/$id';
+    final url = 'http://localhost:8080/todos/$id';
     final uri = Uri.parse(url);
     final response = await http.delete(uri);
     if (response.statusCode == 200) {
