@@ -90,7 +90,7 @@ class _AddTodoState extends State<AddTodo> {
       "is_completed": false
     };
     //submit data to server
-    final url = "http://api.nstack.in/v1/todos";
+    final url = "http://localhost:8080/todos";
     final uri = Uri.parse(url);
     final response = await http.post(
       uri,
@@ -124,7 +124,7 @@ class _AddTodoState extends State<AddTodo> {
       "is_completed": false
     };
     // submit update data to the server
-    final url = "http://api.nstack.in/v1/todos/$id";
+    final url = "http://localhost:8080/todos/$id";
     final uri = Uri.parse(url);
     final response = await http.put(
       uri,
